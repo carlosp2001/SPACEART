@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+
 *,
 *::after,
 *::before {
@@ -29,13 +34,13 @@ header {
     display: block;
 }
 
-.row__logo-text{
+.row__logo-text {
     position: absolute;
     width: 100%;
     height: 5rem;
 }
 
-.logo__text{
+.logo__text {
     position: absolute;
     transform: translateY(-10rem);
 }
@@ -57,8 +62,7 @@ header {
 }
 
 
-
-#logo__img-icon{
+#logo__img-icon {
     width: 100%;
 }
 
@@ -83,11 +87,11 @@ header {
     width: 100%;
 }
 
-.row .col-sm-3:not(:last-child){
+.menu-items .col-sm-3:not(:last-child) {
     border-right: 1px solid black;
 }
 
-.col-sm-3 a{
+.col-sm-3 a {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -95,23 +99,20 @@ header {
 }
 
 
-
-
-
 @media (max-width: 576px) {
-    header{
+    header {
         height: 16rem;
     }
 
-    #logo__img{
+    #logo__img {
         left: 90%;
     }
 
-    .row .col-sm-3:not(:last-child){
+    .row .col-sm-3:not(:last-child) {
         border-right: 1px solid transparent;
     }
 
-    .col-sm-3 a::after{
+    .col-sm-3 a::after {
         content: "";
         position: absolute;
         background-color: #333;
@@ -125,15 +126,21 @@ header {
 }
 
 @media (min-width: 577px) and (max-width: 858px) {
-    header{
+    header {
         height: 11rem;
     }
 
 }
 
 
-
 /* Final Header*/
+
+
+/*Layout*/
+.layout__eslogan {
+    box-shadow: -1px 3px 12px 0 rgba(0, 0, 0, 0.75);
+    position: relative;
+}
 
 #layout__eslogan-container {
     background-image: linear-gradient(to right bottom,
@@ -143,14 +150,14 @@ header {
     height: 85vh;
 }
 
-.heading-primary{
+.heading-primary {
     font-family: initial;
     width: 100%;
     height: 100%;
 
 }
 
-.heading-primary--main{
+.heading-primary--main {
     position: absolute;
     top: 50%;
     left: 25%;
@@ -159,7 +166,7 @@ header {
     font-weight: 400;
 }
 
-.heading-primary--sub{
+.heading-primary--sub {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -168,11 +175,100 @@ header {
     font-weight: 400;
 }
 
-.heading-primary--sub-2{
+.heading-primary--sub-2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(10%,-50%);
+    transform: translate(10%, -50%);
     font-size: 3vw;
-    font-weight: 400;
+
+}
+
+/*Layout final*/
+
+
+#section__artistas {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    padding: 3%;
+    background-color: #eee;
+}
+
+.section__artistas-titulo{
+    font-size: 4vw;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card__container {
+    border: 1px solid transparent;
+    border-radius: 10%;
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+    transition: all .2s;
+}
+
+.card__container:hover {
+    border: 1px solid black;
+}
+
+.picture--1{
+
+    background-blend-mode: screen;
+    background-size: cover;
+    background-image: url("../img/damienhirst.jpeg");
+    width: 100%;
+    height: 30rem;
+}
+
+
+[id^="picture"] {
+
+    background-blend-mode: screen;
+    position: relative;
+    /*border-top-left-radius: 12%;*/
+    /*border-top-right-radius: 12%;*/
+    width: 100%;
+}
+
+.card__details {
+    font-size: inherit;
+    margin-top: 5%;
+    width: 100%;
+    position: relative;
+    height: 10rem;
+}
+
+.card__details__artist {
+    position: absolute;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    width: max-content;
+    font-size: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+}
+
+.card__details__follow {
+    position: absolute;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    width: max-content;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card__details__follow a{
+    color: black;
+    text-decoration: none;
+}
+
+.card__details__follow a:hover{
+    color: rgb(231, 60, 83);
 }
