@@ -11,7 +11,7 @@
     box-sizing: inherit;
 }
 
-a:visited:hover, a:link:hover{
+a:visited:hover, a:link:hover {
     text-decoration: none;
 }
 
@@ -163,7 +163,7 @@ header {
     background-color: #eee;
 }
 
-.section__artistas-titulo{
+.section__artistas-titulo {
     font-size: 4vw;
     width: 100%;
     margin-bottom: 20px;
@@ -185,7 +185,7 @@ header {
     border: 1px solid black;
 }
 
-.picture--1{
+.picture--1 {
     background-blend-mode: screen;
     background-size: cover;
     background-image: url("../img/damienhirst.jpeg");
@@ -229,17 +229,17 @@ header {
     transform: translateX(-50%);
 }
 
-.card__details__follow a{
+.card__details__follow a {
     color: black;
     text-decoration: none;
 }
 
-.card__details__follow a:hover{
+.card__details__follow a:hover {
     color: rgb(231, 60, 83);
 }
 
 /*Footer*/
-.footer{
+.footer {
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     background-color: rgba(234, 220, 165, .3);
@@ -247,23 +247,22 @@ header {
     padding: 20px 0px 20px 0px;
 }
 
-.list_footer{
+.list_footer {
     list-style: none;
 }
 
-.list_footer a:link,a:visited{
+.list_footer a:link, a:visited {
     color: black;
     text-decoration: none;
 }
 
-.list_footer a:visited:hover{
+.list_footer a:visited:hover {
     color: rgb(231, 60, 83);
     text-decoration: black;
 }
 
 
-
-.logo__footer-container{
+.logo__footer-container {
     text-align: center;
 }
 
@@ -302,7 +301,6 @@ header {
     /*.card__details__artist{*/
     /*    font-size: 1.5rem !important;*/
     /*}*/
-
     /*.card__container{*/
     /*    width: 75%;*/
     /*    height: 90%;*/
@@ -327,8 +325,8 @@ header {
 .panel {
     position: relative;
     display: inline-block;
-    width: calc((80vw - 60px)/3);
-    height: calc((80vw - 10px)/3);
+    width: calc((80vw - 60px) / 3);
+    height: calc((80vw - 10px) / 3);
     margin-right: 15px;
     margin-bottom: 20px;
     cursor: pointer;
@@ -344,8 +342,8 @@ header {
 
 .panel:nth-child(5n+4) {
     margin-right: 6px;
-    width: calc(((80vw - 20px)/3)*2);
-    height: calc((80vw - 10px)/3);
+    width: calc(((80vw - 20px) / 3) * 2);
+    height: calc((80vw - 10px) / 3);
 }
 
 /*.panel:nth-child(11n+6) {*/
@@ -470,31 +468,31 @@ header {
 }
 
 @media (max-width: 735px) {
-    .panel-title{
+    .panel-title {
         font-size: 1rem;
     }
 }
 
 @media (max-width: 576px) {
-    .panel-title{
+    .panel-title {
         font-size: 0.8rem;
     }
 
-    .masonry-container{
+    .masonry-container {
         margin-top: 15px;
         width: 100vw;
     }
 
     .panel {
-        width: calc((100vw - 30px)/3);
-        height: calc((100vw - 10px)/3);
+        width: calc((100vw - 30px) / 3);
+        height: calc((100vw - 10px) / 3);
         margin-right: 5px;
     }
 
     .panel:nth-child(5n+4) {
         margin-right: 6px;
-        width: calc(((100vw - 20px)/3)*2);
-        height: calc((100vw - 10px)/3);
+        width: calc(((100vw - 20px) / 3) * 2);
+        height: calc((100vw - 10px) / 3);
     }
 
     .panel-text {
@@ -505,9 +503,154 @@ header {
     .tags-list {
         font-size: 0.5rem;
     }
+}
+
+
+/*Pagina Contactanos*/
+
+.section-contactanos {
+    font-family: Nunito, sans-serif;
+    padding: 15rem 5rem;
+    background-color: palegoldenrod;
+}
+
+.row-contact::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.contactanos {
+    background-image: linear-gradient(
+            105deg,
+            white 0%,
+            white 10%,
+            transparent 80%
+    ), url("../img/collage.jpg");
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem black;
+    height: 56rem;
+}
+
+.contactanos-form {
+    width: 50%;
+    padding: 4rem 4rem;
+}
+
+.form__group:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.form__input {
+    font-size: 1rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(1, 1, 1, .4);
+    width: 100%;
+    display: block;
+    transition: all 0.3s;
+}
+
+.form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid palegoldenrod;
+}
+.form__input:focus:invalid {
+    border-bottom: 3px solid red;
+}
+.form__input::-webkit-input-placeholder {
+    color: #999;
+}
+.form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+}
+
+@media (max-width: 1100px) {
+    .section-contactanos{
+        width: 96vw;
+        padding: 3rem 3rem;
+    }
+
+    .contactanos-form{
+        width: 100%;
+    }
 
 
 }
+
+@media (max-width: 576px) {
+    .section-contactanos{
+        padding: 3rem 3rem;
+    }
+
+}
+
+
+/*Artistas*/
+
+.container1{
+    font-family: Nunito, sans-serif;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container1 .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(17, 0, 255, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: palegoldenrod;
+}
+
+.container1 .card:hover{
+
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+.container1 .card img{
+    width: 330px;
+    height: 220px;
+}
+
+.container1 .card h4{
+    font-weight: 600;
+}
+
+.container1 .card p{
+    padding: 0 1rem;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.container1 .card a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+
+.artistas__layout{
+    position: relative;
+    background-image: linear-gradient(to right bottom,
+    rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../img/bgimage.png');
+    background-size: cover;
+    background-position: center;
+}
+
 
 
 
