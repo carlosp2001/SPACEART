@@ -159,7 +159,7 @@ header {
 #section__artistas {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    padding: 3%;
+    padding: 2%;
     background-color: #eee;
 }
 
@@ -168,6 +168,19 @@ header {
     width: 100%;
     margin-bottom: 20px;
 }
+
+.main_card_container{
+    margin: 0;
+
+}
+
+.container_card{
+    flex-basis: 33.33%;
+}
+
+/*.main_card_container .container_card:not(:last-child){*/
+/*    flex-grow: 1;*/
+/*}*/
 
 .card__container {
     border: 1px solid transparent;
@@ -267,9 +280,19 @@ header {
 }
 
 
+@media (max-width: 1200px) {
+    .container_card{
+        flex-basis: 50%;
+    }
+}
+
+
 @media (max-width: 735px) {
     header {
         height: 11rem;
+    }
+    .container_card{
+        flex-basis: 100%;
     }
 }
 
@@ -305,7 +328,9 @@ header {
     /*    width: 75%;*/
     /*    height: 90%;*/
     /*}*/
-
+    .container_card{
+        width: 100%;
+    }
 }
 
 
